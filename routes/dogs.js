@@ -2,26 +2,15 @@
 
 const express = require('express');
 const router = express.Router();
+const Queue = require('../Queue');
+const dogQueue = new Queue();
 
-let dogs = [
-  {
-    imageURL: 'http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg',
-    imageDescription: 'A smiling golden-brown golden retreiver listening to music.',
-    name: 'Zeus',
-    sex: 'Male',
-    age: 3,
-    breed: 'Golden Retriever',
-    story: 'Owner Passed away'
-  },
-  {
-    imageURL: 'http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg',
-    imageDescription: 'A smiling golden-brown golden retreiver listening to music.',
-    name: 'Zeus',
-    sex: 'Male',
-    age: 3,
-    breed: 'Golden Retriever',
-    story: 'Owner Passed away'
-  },
+
+function peek(queue) {
+  return queue.first.value;
+}
+
+dogQueue.enqueue(
   {
     imageURL: 'http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg',
     imageDescription: 'A smiling golden-brown golden retreiver listening to music.',
@@ -31,15 +20,40 @@ let dogs = [
     breed: 'Golden Retriever',
     story: 'Owner Passed away'
   }
-];
+);
+dogQueue.enqueue(
+  {
+    imageURL: 'http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg',
+    imageDescription: 'A smiling golden-brown golden retreiver listening to music.',
+    name: 'Killer',
+    sex: 'Male',
+    age: 4,
+    breed: 'Golden Retriever',
+    story: 'Owner Passed away'
+  }
+);
+dogQueue.enqueue(
+  {
+    imageURL: 'http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg',
+    imageDescription: 'A smiling golden-brown golden retreiver listening to music.',
+    name: 'Happy',
+    sex: 'Male',
+    age: 5,
+    breed: 'Golden Retriever',
+    story: 'Owner Passed away'
+  }
+);
+console.log(peek(dogQueue));
+
 
 router.get('/', (req, res, next) => {
-  res.status(201).json(dogs[0]);
+  res.status(201).json(peek(dogQueue));
 });
 
 router.delete('/', (req, res, next) => {
-  dogs.shift();
-  res.status(201).json(dogs[0]);
+  dogQueue.dequeue();
+  console.log(peek(dogQueue));
+  res.status(201).json(peek(dogQueue));
 });
 
 module.exports = router;

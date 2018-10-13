@@ -1,6 +1,6 @@
 'use strict';
 
-const _Node = require('./_Node')
+const _Node = require('./_Node');
 
 class Queue {
   constructor() {

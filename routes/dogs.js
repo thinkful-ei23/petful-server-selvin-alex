@@ -25,7 +25,7 @@ dogQueue.enqueue(
   {
     imageURL: 'https://i.ytimg.com/vi/oH_GHvcF9VM/hqdefault.jpg',
     imageDescription: 'A smiling golden-brown golden retreiver listening to music.',
-    name: 'Powerder Puff',
+    name: 'Powder Puff',
     sex: 'Male',
     age: 4,
     breed: 'Golden Retriever',

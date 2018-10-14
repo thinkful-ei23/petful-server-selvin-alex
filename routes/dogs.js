@@ -23,9 +23,9 @@ dogQueue.enqueue(
 );
 dogQueue.enqueue(
   {
-    imageURL: 'http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg',
+    imageURL: 'https://i.ytimg.com/vi/oH_GHvcF9VM/hqdefault.jpg',
     imageDescription: 'A smiling golden-brown golden retreiver listening to music.',
-    name: 'Killer',
+    name: 'Powerder Puff',
     sex: 'Male',
     age: 4,
     breed: 'Golden Retriever',
@@ -34,7 +34,7 @@ dogQueue.enqueue(
 );
 dogQueue.enqueue(
   {
-    imageURL: 'http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg',
+    imageURL: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdRlDRFosG98bSpdFmmJGxGTgMl_xLdyTJXJKtYGkgcBZe0Gh3',
     imageDescription: 'A smiling golden-brown golden retreiver listening to music.',
     name: 'Happy',
     sex: 'Male',

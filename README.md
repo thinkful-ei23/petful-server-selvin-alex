@@ -1,45 +1,35 @@
-# Thinkful Backend Template
+# PETFUL ADOPTION APP - SERVER
 
-A template for developing and deploying Node.js apps.
+[Demo Petful Adoption App Here](https://dashboard.heroku.com/apps/petful-client-alex-selvin)
 
-## Getting started
+[Petful Adoption App - Client README.md](https://github.com/thinkful-ei23/petful-client-selvin-alex/blob/master/README.md)
 
-### Setting up a project
+## Summary
+The Petful Adotpion App will allow you to adopt a cat or dog. When you come to the website, a dog and cat will appear, you can only adopt the cat or dog that has been there the longest. After adopting a pet, the next pet in line will take it's place.
 
-* Move into your projects directory: `cd ~/YOUR_PROJECTS_DIRECTORY`
-* Clone this repository: `git clone https://github.com/Thinkful-Ed/backend-template YOUR_PROJECT_NAME`
-* Move into the project directory: `cd YOUR_PROJECT_NAME`
-* Install the dependencies: `npm install`
-* Create a new repo on GitHub: https://github.com/new
-    * Make sure the "Initialize this repository with a README" option is left unchecked
-* Update the remote to point to your GitHub repository: `git remote set-url origin https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME`
+## Features
 
-### Working on the project
+### Show Data
+The dashboard will display a cat and a dog which you can then decide to adopt if you wish.
 
-* Move into the project directory: `cd ~/YOUR_PROJECTS_DIRECTORY/YOUR_PROJECT_NAME`
-* Run the development task: `npm start`
-    * Starts a server running at http://localhost:8080
-    * Automatically restarts when any of your files change
+## Tech Used :computer:
 
-## Databases
+### Front-End
+* HTML5
+* CSS3
+* Vanilla JavaScript
+* React
+* Redux
 
-By default, the template is configured to connect to a MongoDB database using Mongoose.  It can be changed to connect to a PostgreSQL database using Knex by replacing any imports of `db-mongoose.js` with imports of `db-knex.js`, and uncommenting the Postgres `DATABASE_URL` lines in `config.js`.
+### Back-End
+* Node.js
+* Express.js
 
-## Deployment
+### Deployment
+* Heroku - cloud PaaS
 
-Requires the [Heroku CLI client](https://devcenter.heroku.com/articles/heroku-command-line).
+## Project Location
+Both the client and the server are hosted on Heroku as individual projects.
 
-### Setting up the project on Heroku
-
-* Move into the project directory: `cd ~/YOUR_PROJECTS_DIRECTORY/YOUR_PROJECT_NAME`
-* Create the Heroku app: `heroku create PROJECT_NAME`
-
-* If your backend connects to a database, you need to configure the database URL:
-    * For a MongoDB database: `heroku config:set DATABASE_URL=mongodb://USERNAME:PASSWORD@HOST:PORT/DATABASE_NAME`
-    * For a PostgreSQL database: `heroku config:set DATABASE_URL=postgresql://USERNAME:PASSWORD@HOST:PORT/DATABASE_NAME`
-
-* If you are creating a full-stack app, you need to configure the client origin: `heroku config:set CLIENT_ORIGIN=https://www.YOUR_DEPLOYED_CLIENT.com`
-
-### Deploying to Heroku
-
-* Push your code to Heroku: `git push heroku master`
+## API Documentation
+[Click to view API documentation](https://documenter.getpostman.com/view/4458639/RWgrxxhd)
